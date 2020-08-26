@@ -63,15 +63,18 @@ providing links to publications, tools, and industrial case studies.
 		For a more detailed description of the challenges and principles for Verified AI, please consult <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-seshia-arxiv16.html">our paper</a>.
 
 		<h3>Environment Modeling</h3>
+		The environment of AI-based systems can be extremely complex --- indeed, the use of AI and Machine Learning (ML) is often introduced to deal with this complexity. Some key challenges are: finding the right model fidelity, modeling human behavior, and dealing with the "unknown variables" problem, where we do not know all the agents and objects in the environment, let alone have models of their behaviors. Here are the principles we are applying to address these challenges:
 		<ul>
 			<li><i>Probabilistic Modeling</i>: We have designed Scenic, a probabilistic programming language for modeling environments of systems with AI-based autonomy. <br> 
 				See <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-fremont-pldi19.html">Scenic: A Language for Scenario Specification and Scene Generation</a>, Fremont et al., PLDI 2019.
 			</li>
 
-			<li>
+			<li><i>Active Data-Driven Model Inference</i>: We are developing techniques for learning models of human behavior from data gathered actively. <br>
+				See <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-sadigh-iros16.html">Information Gathering Actions Over Human Internal State</a>, Sadigh et al., IROS 2016.
 			</li>
 
-			<li>
+			<li><i>Introspective Environment Modeling</i>: To deal with the "unknown variables" problem, we propose the use of algorithmic methods to extract assumptions on the environment, monitorable by reliable sensors, under which safe and correct operation can be guaranteed.<br>
+				See <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-seshia-rv19.html">Introspective Environment Modeling</a>, Seshia, RV 2019.
 			</li>
 
 		</ul>
