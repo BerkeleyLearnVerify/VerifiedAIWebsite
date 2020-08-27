@@ -81,15 +81,86 @@ providing links to publications, tools, and industrial case studies.
 
 
 		<h3>Formal Specification</h3>
+		This crucial aspect of formal methods faces multiple challenges, including "hard-to-formalize" tasks such as perception, combining quantitative and Boolean 
+		specification formalisms, and bridging the gap between data and logic-based specifications. Here are some of the ways we
+		are addressing these:
+		<ul>
+			<li><i>Survey of Specification for ML</i>: This paper surveys the various types of properties of interest for ML models/systems, especially for deep neural networks: <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-seshia-atva18.html">Formal Specification for Deep Neural Networks</a>, Seshia et al., ATVA 2018. 
+			</li>
+
+			<li><i>Start at System Level</i>: We are developing methods that start with system-level specification and then derive component-level properties from those, particularly relevant for hard-to-formalize tasks.  <br> 
+				See <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-dreossi-jar19.html">Compositional Falsification of Cyber-Physical Systems with Machine Learning Components</a>, Dreossi et al., JAR 2019 (NFM 2017).
+			</li>
+
+			<li><i>Hybrid Quantitative-Boolean Specifications</i>: Here is a paper formalizing the various flavors of "robustness" that people have considered in the literature, especially on Adversarial ML, giving a unifying quantitative-Boolean formulation of robustness: <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-dreossi-vnn19.html">A Formalization of Robustness for Deep Neural Networks</a>, Dreossi et al., VNN 2019.
+			</li>
+
+			<li><i>Specification Mining</i>: We believe the paradigm of learning formal (logic, automata-based) specifications from data is a promising approach to bridge the gap with how tasks are specified in ML using data. Here are some papers exploring this approach:<br> 
+				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-vazquez-neurips18.html">Learning Task Specifications from Demonstrations</a>, Vazquez-Chanlatte et al, NeurIPS 2018.<br>
+				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-vazquez-cav17.html">Logical Clustering and Learning for Time-Series Data</a>, Vazquez-Chanlatte et al, CAV 2017.<br>
+			</li>
+
+		</ul>
 
 
 		<h3>Modeling Learning Systems</h3>
+		The high-dimensionality of input and state spaces for AI-based systems, illustrated, e.g., by deep neural networks used for perception, 
+		require new approaches for abstraction and modeling of learning systems. Here are some representative results addressing this need:
+		<ul>
+			<li><i>Semantic Feature Spaces</i>: Modeling the underlying semantic context in which an AI/ML system operates can be crucial to scale up analysis and also provide more meaningful results. <br> 
+				See <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-dreossi-cav18.html">Semantic Adversarial Deep Learning</a>, Dreossi et al, CAV 2018.
+			</li>
+
+			<li><i>Abstractions for ML Models</i>: Even simple abstractions of ML models can help a great deal, as shown in this paper:  <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-dreossi-jar19.html">Compositional Falsification of Cyber-Physical Systems with Machine Learning Components</a>, Dreossi et al., JAR 2019 (NFM 2017).
+			</li>
+
+			<li><i>Generating Interpretations/Explanations for ML Models</i>: Complex ML models such as deep neural networks become more amenable to formal analysis when they can be lifted to more interpretable/explainable representations. Here is a representative publication on this topic:  <br> 
+				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-kim-cvpr20.html">A Programmatic and Semantic Approach to Explaining and Debugging Neural Network Based Object Detectors</a>, Kim et al, CVPR 2020.
+			</li>
+
+		</ul>
 
 
 		<h3>Scalable Computational Engines</h3>
+		Several advances are needed in creating computational engines for efficient and scalable training, testing, 
+		design, and verification of AI-based systems. Here are some results along this direction:
+		<ul>
+			<li><i>Compositional Analysis</i>: A modular approach is central to scaling up formal methods to large systems.
+			       We are developing compositional methods for AI-based systems, even in the case where components (such as
+		               perception) do not themselves have precise, formal specifications. See this sample paper:
+				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-dreossi-jar19.html">Compositional Falsification of Cyber-Physical Systems with Machine Learning Components</a>, Dreossi et al., JAR 2019 (NFM 2017).
+			</li>
+
+			<li><i>Quantitative Semantic Analysis</i>: Leveraging optimization-driven methods to search in an efficient goal-directed manner over semantic feature spaces, see sample papers: <br> 
+				<a href="https://arxiv.org/abs/1910.00727">Analyzing and Improving Neural Networks by Generating Semantic Counterexamples through Differentiable Rendering</a>, Jain et al., 2020.<br>
+				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-verifai-cav19.html">VerifAI: A Toolkit for the Formal Design and Analysis of Artificial Intelligence-Based Systems</a>, Dreossi et al., CAV 2019.
+			</li>
+
+			<li><i>Data Set Design</i>: We are developing methods for efficiently generating data satisfying hard, soft, and distributional constraints, based on the theory of algorithmic (controlled) improvisation, implemented in the back end of the Scenic programming system:<br> 
+				See <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-fremont-pldi19.html">Scenic: A Language for Scenario Specification and Scene Generation</a>, Fremont et al., PLDI 2019.
+			</li>
+
+		</ul>
 
 
 		<h3>Correct-by-Construction Design</h3>
+		The techniques described in the above thrusts must be augmented by methods to design correct and robust AI/ML-based systems.
+		We see three significant directions for this thrust:
+		<ul>
+			<li><i>Formal Inductive Synthesis</i>: Learning systems must be coupled with oracles (such as verifiers) that can provide formal guarantees on the learned models or produce counterexamples and other data that they can be improved with. This leads us to develop a theory of <i>oracle-guided inductive synthesis</i> described and applied in the papers listed below: <br> 
+				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-jha-acta17.html">A Theory of Formal Synthesis via Inductive Learning</a>, Jha and Seshia, Acta Informatica, 2017.<br>
+				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-dreossi-ijcai18.html">Counterexample-Guided Data Augmentation</a>, Dreossi et al., IJCAI 2018. 
+			</li>
+
+			<li><i>Run-time Assurance Systems</i>: Techniques for run-time assurance couple a component that might be unverified
+				or only verified to operate safety under certain conditions with a fall-back component that can take over
+				when necessary to provide a minimal assurance of safe operation at all times. In this regard, we have developed
+				a runtime assurance system called SOTER, described in the following papers:<br>
+				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-desai-dsn19.html">SOTER: A Runtime Assurance Framework for Programming Safe Robotics Systems</a>, Desai et al., DSN 2019.<br>
+				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-shivakumar-rv20.html">SOTER on ROS: A Run-Time Assurance Framework on the Robot Operating System</a>, Shivakumar et al., RV 2020.
+			</li>
+
+		</ul>
 
 
             </section>
@@ -128,7 +199,7 @@ providing links to publications, tools, and industrial case studies.
             
             <section id="examples">
                 <h2>Industrial Case Studies</h2>
-		Scenic and VerifAI have been used in industrial case studies, here are two documented instances:
+		Scenic and VerifAI have been used in industrial case studies, here are two documented instances involving collaborations with industrial partners:
 		<ul>
 
 			<li><a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-fremont-cav20.html"><i>Formal Analysis and Redesign of a Neural Network-Based Aircraft Taxiing System with VerifAI</i></a>,
@@ -143,6 +214,9 @@ providing links to publications, tools, and industrial case studies.
 
             <section id="people">
                 <h2>People</h2>
+		The Verified AI project effort is led by <a href="https://people.eecs.berkeley.edu/~sseshia">Professor Sanjit Seshia</a> at UC Berkeley and several 
+		students, postdocs, and collaborators from UC Berkeley and elsewhere.
+
             </section>
 
             <section id="sponsors">
@@ -154,5 +228,6 @@ providing links to publications, tools, and industrial case studies.
 		Berkeley Deep Drive.
             </section>
         </section>
+
     </body>
 </html>
