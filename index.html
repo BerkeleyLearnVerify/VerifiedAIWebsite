@@ -47,12 +47,15 @@
                 <p>
 		<i>Verified Artificial Intelligence (AI)</i> is the goal of designing AI-based systems
 that have strong, ideally provable, assurances of correctness with respect to mathematically-specified requirements.
-In a paper published first in 2016, <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-seshia-arxiv16.html">Towards Verified Artificial Intelligence</a>, we discussed the
+Our paper <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-seshia-arxiv16.html">Towards Verified Artificial Intelligence</a>,
+first published in 2016, presents our view of the
 challenges for applying formal methods to improve assurance in AI-based systems, identifying five major categories:
 <i>environment modeling</i>, <i>formal specification</i>, <i>modeling learning systems</i>,
 <i>scalable computational engines</i>, and <i>correct-by-construction design methods</i>. The paper also proposes 
-principles for tackling these challenges. In this website, we describe our progress towards the goal of Verified AI,
+principles for tackling these challenges. In this website, we describe our ongoing progress towards the goal of Verified AI,
 providing links to publications, tools, and industrial case studies.
+The paper cited above provides more details on our perspective of the field, including links to
+the work by other groups.
 
                 </p>
             </section>
@@ -85,17 +88,18 @@ providing links to publications, tools, and industrial case studies.
 		specification formalisms, and bridging the gap between data and logic-based specifications. Here are some of the ways we
 		are addressing these:
 		<ul>
-			<li><i>Survey of Specification for ML</i>: This paper surveys the various types of properties of interest for ML models/systems, especially for deep neural networks: <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-seshia-atva18.html">Formal Specification for Deep Neural Networks</a>, Seshia et al., ATVA 2018. 
+			<li><i>Specification for ML</i>: This paper surveys the various types of properties of interest for ML models/systems, especially for deep neural networks: <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-seshia-atva18.html">Formal Specification for Deep Neural Networks</a>, Seshia et al., ATVA 2018. 
 			</li>
 
-			<li><i>Start at System Level</i>: We are developing methods that start with system-level specification and then derive component-level properties from those, particularly relevant for hard-to-formalize tasks.  <br> 
-				See <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-dreossi-jar19.html">Compositional Falsification of Cyber-Physical Systems with Machine Learning Components</a>, Dreossi et al., JAR 2019 (NFM 2017).
+			<li><i>Start at the System Level</i>: We are developing methods that start with specifications at the system level, i.e., for the entire AI/ML-based system, and then derive component-level properties from those, an approach particularly relevant for hard-to-formalize tasks.  <br> 
+				See <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-dreossi-jar19.html">Compositional Falsification of Cyber-Physical Systems with Machine Learning Components</a>, Dreossi et al., JAR 2019 (first version in NFM 2017).
 			</li>
 
-			<li><i>Hybrid Quantitative-Boolean Specifications</i>: Here is a paper formalizing the various flavors of "robustness" that people have considered in the literature, especially on Adversarial ML, giving a unifying quantitative-Boolean formulation of robustness: <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-dreossi-vnn19.html">A Formalization of Robustness for Deep Neural Networks</a>, Dreossi et al., VNN 2019.
+			<li><i>Hybrid Quantitative-Boolean Specifications</i>: Here is a paper formalizing the various flavors of "robustness" that people have considered in the literature, especially on Adversarial ML, giving a unifying quantitative-Boolean formulation of robustness:<br>
+			       	<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-dreossi-vnn19.html">A Formalization of Robustness for Deep Neural Networks</a>, Dreossi et al., VNN 2019.
 			</li>
 
-			<li><i>Specification Mining</i>: We believe the paradigm of learning formal (logic, automata-based) specifications from data is a promising approach to bridge the gap with how tasks are specified in ML using data. Here are some papers exploring this approach:<br> 
+			<li><i>Specification Mining</i>: We believe the paradigm of learning formal (logic/automata-based) specifications from data is a promising approach to bridge the gap with how tasks are specified in ML using data. Here are some papers exploring this approach:<br> 
 				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-vazquez-neurips18.html">Learning Task Specifications from Demonstrations</a>, Vazquez-Chanlatte et al, NeurIPS 2018.<br>
 				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-vazquez-cav17.html">Logical Clustering and Learning for Time-Series Data</a>, Vazquez-Chanlatte et al, CAV 2017.<br>
 			</li>
@@ -111,7 +115,7 @@ providing links to publications, tools, and industrial case studies.
 				See <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-dreossi-cav18.html">Semantic Adversarial Deep Learning</a>, Dreossi et al, CAV 2018.
 			</li>
 
-			<li><i>Abstractions for ML Models</i>: Even simple abstractions of ML models can help a great deal, as shown in this paper:  <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-dreossi-jar19.html">Compositional Falsification of Cyber-Physical Systems with Machine Learning Components</a>, Dreossi et al., JAR 2019 (NFM 2017).
+			<li><i>Abstractions for ML Models</i>: Even simple abstractions of ML models can help a great deal, as shown in this paper:  <a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-dreossi-jar19.html">Compositional Falsification of Cyber-Physical Systems with Machine Learning Components</a>, Dreossi et al., JAR 2019 (first version in NFM 2017).
 			</li>
 
 			<li><i>Generating Interpretations/Explanations for ML Models</i>: Complex ML models such as deep neural networks become more amenable to formal analysis when they can be lifted to more interpretable/explainable representations. Here is a representative publication on this topic:  <br> 
@@ -131,7 +135,7 @@ providing links to publications, tools, and industrial case studies.
 				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-dreossi-jar19.html">Compositional Falsification of Cyber-Physical Systems with Machine Learning Components</a>, Dreossi et al., JAR 2019 (NFM 2017).
 			</li>
 
-			<li><i>Quantitative Semantic Analysis</i>: Leveraging optimization-driven methods to search in an efficient goal-directed manner over semantic feature spaces, see sample papers: <br> 
+			<li><i>Quantitative Semantic Analysis</i>: We are leveraging optimization-driven methods to search in an efficient goal-directed manner over semantic feature spaces, see sample papers: <br> 
 				<a href="https://arxiv.org/abs/1910.00727">Analyzing and Improving Neural Networks by Generating Semantic Counterexamples through Differentiable Rendering</a>, Jain et al., 2020.<br>
 				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-verifai-cav19.html">VerifAI: A Toolkit for the Formal Design and Analysis of Artificial Intelligence-Based Systems</a>, Dreossi et al., CAV 2019.
 			</li>
@@ -145,17 +149,17 @@ providing links to publications, tools, and industrial case studies.
 
 		<h3>Correct-by-Construction Design</h3>
 		The techniques described in the above thrusts must be augmented by methods to design correct and robust AI/ML-based systems.
-		We see three significant directions for this thrust:
+		Here is some of our work on such methods:
 		<ul>
-			<li><i>Formal Inductive Synthesis</i>: Learning systems must be coupled with oracles (such as verifiers) that can provide formal guarantees on the learned models or produce counterexamples and other data that they can be improved with. This leads us to develop a theory of <i>oracle-guided inductive synthesis</i> described and applied in the papers listed below: <br> 
+			<li><i>Formal Inductive Synthesis</i>: Learning systems can be coupled with oracles (such as verifiers) that provide formal guarantees on the learned models or produce counterexamples and other data that they can be improved with. This leads us to develop a theory of <i>oracle-guided inductive synthesis</i> described and applied in the papers listed below: <br> 
 				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-jha-acta17.html">A Theory of Formal Synthesis via Inductive Learning</a>, Jha and Seshia, Acta Informatica, 2017.<br>
 				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-dreossi-ijcai18.html">Counterexample-Guided Data Augmentation</a>, Dreossi et al., IJCAI 2018. 
 			</li>
 
-			<li><i>Run-time Assurance Systems</i>: Techniques for run-time assurance couple a component that might be unverified
+			<li><i>Run-time Assurance Systems</i>: Techniques for run-time assurance compose a component that might be unverified
 				or only verified to operate safety under certain conditions with a fall-back component that can take over
-				when necessary to provide a minimal assurance of safe operation at all times. In this regard, we have developed
-				a runtime assurance system called SOTER, described in the following papers:<br>
+				when necessary to provide a minimal assurance of safe operation at all times, along with associated switching logic. 
+				In this regard, we have developed a runtime assurance system called SOTER, described in the following papers:<br>
 				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-desai-dsn19.html">SOTER: A Runtime Assurance Framework for Programming Safe Robotics Systems</a>, Desai et al., DSN 2019.<br>
 				<a href="https://people.eecs.berkeley.edu/~sseshia/pubs/b2hd-shivakumar-rv20.html">SOTER on ROS: A Run-Time Assurance Framework on the Robot Operating System</a>, Shivakumar et al., RV 2020.
 			</li>
@@ -214,7 +218,7 @@ providing links to publications, tools, and industrial case studies.
 
             <section id="people">
                 <h2>People</h2>
-		The Verified AI project effort is led by <a href="https://people.eecs.berkeley.edu/~sseshia">Professor Sanjit Seshia</a> at UC Berkeley and several 
+		The Verified AI effort is led by <a href="https://people.eecs.berkeley.edu/~sseshia">Professor Sanjit Seshia</a> at UC Berkeley and several 
 		students, postdocs, and collaborators from UC Berkeley and elsewhere.
 
             </section>
